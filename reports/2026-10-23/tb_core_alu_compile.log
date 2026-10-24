@@ -1,0 +1,4 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module rv32i_core declared here: build/synth/optimized/rv32i_core_netlist.v:3

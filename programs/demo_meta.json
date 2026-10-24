@@ -1,0 +1,13 @@
+{
+  "halt_pc": 160,
+  "labels": {
+    "branch_a": 92,
+    "branch_b": 100,
+    "jal_target": 116,
+    "jalr_target": 128,
+    "blt_target": 136,
+    "bge_target": 144,
+    "halt": 160
+  },
+  "instruction_count": 41
+}

@@ -1,0 +1,3 @@
+VCD info: dumpfile build/rv32i_edge.vcd opened for output.
+EDGE TEST PASSED: 50 instruction steps; signed, unsigned, branch, loop, jump and RAM checks
+tb/tb_soc_edge.v:92: $finish called at 530000 (1ps)

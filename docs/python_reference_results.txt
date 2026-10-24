@@ -1,0 +1,11 @@
+python3 tools/build_program.py
+Generated 41 instructions; halt @ byte address 160.
+python3 tools/reference_model.py
+PASS: Python demo reference: 34 executed instructions, 32 registers, RAM[3]
+NOTE: Python reference is NOT an RTL simulation.
+python3 tools/build_edge_program.py
+Generated edge-case ROM: 53 instructions, halt PC=208.
+python3 tools/edge_reference.py
+PASS: Python edge reference: 50 executed instructions, 32 registers, 11 branch outcomes, RAM[7]
+NOTE: Python reference is NOT an RTL simulation.
+python3 -m compileall -q tools

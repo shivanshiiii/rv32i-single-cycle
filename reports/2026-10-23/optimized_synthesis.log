@@ -1,0 +1,1438 @@
+
+-- Executing script file `build/synth/optimized/run.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/rv32i_core.v
+Parsing Verilog input from `rtl/rv32i_core.v' to AST representation.
+Generating RTLIL representation for module `\rv32i_core'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+2.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$139 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$136 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$133 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$130 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$127 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$124 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$121 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$118 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$115 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$112 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$109 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$106 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$103 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$100 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$97 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$94 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$91 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$88 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$85 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$82 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$79 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$76 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$73 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$70 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$67 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$64 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$61 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$58 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$55 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$52 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:155$49 in module rv32i_core.
+Marked 1 switch rules as full_case in process $proc$rtl/rv32i_core.v:162$48 in module rv32i_core.
+Removed 1 dead cases from process $proc$rtl/rv32i_core.v:53$18 in module rv32i_core.
+Marked 15 switch rules as full_case in process $proc$rtl/rv32i_core.v:53$18 in module rv32i_core.
+Removed a total of 1 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 39 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~78 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$139'.
+     1/1: $0\g_regfile[31].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$136'.
+     1/1: $0\g_regfile[30].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$133'.
+     1/1: $0\g_regfile[29].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$130'.
+     1/1: $0\g_regfile[28].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$127'.
+     1/1: $0\g_regfile[27].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$124'.
+     1/1: $0\g_regfile[26].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$121'.
+     1/1: $0\g_regfile[25].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$118'.
+     1/1: $0\g_regfile[24].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$115'.
+     1/1: $0\g_regfile[23].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$112'.
+     1/1: $0\g_regfile[22].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$109'.
+     1/1: $0\g_regfile[21].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$106'.
+     1/1: $0\g_regfile[20].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$103'.
+     1/1: $0\g_regfile[19].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$100'.
+     1/1: $0\g_regfile[18].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$97'.
+     1/1: $0\g_regfile[17].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$94'.
+     1/1: $0\g_regfile[16].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$91'.
+     1/1: $0\g_regfile[15].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$88'.
+     1/1: $0\g_regfile[14].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$85'.
+     1/1: $0\g_regfile[13].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$82'.
+     1/1: $0\g_regfile[12].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$79'.
+     1/1: $0\g_regfile[11].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$76'.
+     1/1: $0\g_regfile[10].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$73'.
+     1/1: $0\g_regfile[9].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$70'.
+     1/1: $0\g_regfile[8].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$67'.
+     1/1: $0\g_regfile[7].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$64'.
+     1/1: $0\g_regfile[6].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$61'.
+     1/1: $0\g_regfile[5].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$58'.
+     1/1: $0\g_regfile[4].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$55'.
+     1/1: $0\g_regfile[3].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$52'.
+     1/1: $0\g_regfile[2].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:155$49'.
+     1/1: $0\g_regfile[1].value[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:162$48'.
+     1/1: $0\pc[31:0]
+Creating decoders for process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+     1/43: $9\reg_write[0:0]
+     2/43: $3\dmem_we[0:0]
+     3/43: $11\illegal_instr[0:0]
+     4/43: $7\next_pc[31:0]
+     5/43: $8\write_data[31:0]
+     6/43: $8\reg_write[0:0]
+     7/43: $10\illegal_instr[0:0]
+     8/43: $6\next_pc[31:0]
+     9/43: $5\next_pc[31:0]
+    10/43: $4\next_pc[31:0]
+    11/43: $3\next_pc[31:0]
+    12/43: $2\next_pc[31:0]
+    13/43: $9\illegal_instr[0:0]
+    14/43: $2\dmem_we[0:0]
+    15/43: $2\dmem_wdata[31:0]
+    16/43: $3\dmem_addr[31:0]
+    17/43: $8\illegal_instr[0:0]
+    18/43: $7\reg_write[0:0]
+    19/43: $7\write_data[31:0]
+    20/43: $2\dmem_addr[31:0]
+    21/43: $7\illegal_instr[0:0]
+    22/43: $6\write_data[31:0]
+    23/43: $6\reg_write[0:0]
+    24/43: $6\illegal_instr[0:0]
+    25/43: $5\write_data[31:0]
+    26/43: $5\reg_write[0:0]
+    27/43: $5\illegal_instr[0:0]
+    28/43: $4\write_data[31:0]
+    29/43: $4\reg_write[0:0]
+    30/43: $4\illegal_instr[0:0]
+    31/43: $3\write_data[31:0]
+    32/43: $3\reg_write[0:0]
+    33/43: $3\illegal_instr[0:0]
+    34/43: $2\write_data[31:0]
+    35/43: $2\reg_write[0:0]
+    36/43: $2\illegal_instr[0:0]
+    37/43: $1\reg_write[0:0]
+    38/43: $1\write_data[31:0]
+    39/43: $1\illegal_instr[0:0]
+    40/43: $1\next_pc[31:0]
+    41/43: $1\dmem_we[0:0]
+    42/43: $1\dmem_wdata[31:0]
+    43/43: $1\dmem_addr[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\rv32i_core.\regfile[0]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[1]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[2]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[3]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[4]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[5]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[6]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[7]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[8]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[9]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[10]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[11]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[12]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[13]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[14]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[15]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[16]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[17]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[18]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[19]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[20]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[21]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[22]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[23]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[24]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[25]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[26]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[27]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[28]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[29]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[30]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\regfile[31]' from process `\rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+No latch inferred for signal `\rv32i_core.\dmem_addr' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\dmem_wdata' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\dmem_we' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\illegal_instr' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\next_pc' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\write_data' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+No latch inferred for signal `\rv32i_core.\reg_write' from process `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\rv32i_core.\g_regfile[31].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$139'.
+  created $dff cell `$procdff$842' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[30].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$136'.
+  created $dff cell `$procdff$843' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[29].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$133'.
+  created $dff cell `$procdff$844' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[28].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$130'.
+  created $dff cell `$procdff$845' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[27].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$127'.
+  created $dff cell `$procdff$846' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[26].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$124'.
+  created $dff cell `$procdff$847' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[25].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$121'.
+  created $dff cell `$procdff$848' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[24].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$118'.
+  created $dff cell `$procdff$849' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[23].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$115'.
+  created $dff cell `$procdff$850' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[22].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$112'.
+  created $dff cell `$procdff$851' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[21].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$109'.
+  created $dff cell `$procdff$852' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[20].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$106'.
+  created $dff cell `$procdff$853' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[19].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$103'.
+  created $dff cell `$procdff$854' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[18].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$100'.
+  created $dff cell `$procdff$855' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[17].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$97'.
+  created $dff cell `$procdff$856' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[16].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$94'.
+  created $dff cell `$procdff$857' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[15].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$91'.
+  created $dff cell `$procdff$858' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[14].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$88'.
+  created $dff cell `$procdff$859' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[13].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$85'.
+  created $dff cell `$procdff$860' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[12].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$82'.
+  created $dff cell `$procdff$861' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[11].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$79'.
+  created $dff cell `$procdff$862' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[10].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$76'.
+  created $dff cell `$procdff$863' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[9].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$73'.
+  created $dff cell `$procdff$864' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[8].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$70'.
+  created $dff cell `$procdff$865' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[7].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$67'.
+  created $dff cell `$procdff$866' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[6].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$64'.
+  created $dff cell `$procdff$867' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[5].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$61'.
+  created $dff cell `$procdff$868' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[4].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$58'.
+  created $dff cell `$procdff$869' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[3].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$55'.
+  created $dff cell `$procdff$870' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[2].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$52'.
+  created $dff cell `$procdff$871' with positive edge clock.
+Creating register for signal `\rv32i_core.\g_regfile[1].value' using process `\rv32i_core.$proc$rtl/rv32i_core.v:155$49'.
+  created $dff cell `$procdff$872' with positive edge clock.
+Creating register for signal `\rv32i_core.\pc' using process `\rv32i_core.$proc$rtl/rv32i_core.v:162$48'.
+  created $dff cell `$procdff$873' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:0$142'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$139'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$139'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$136'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$136'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$133'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$133'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$130'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$130'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$127'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$127'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$124'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$124'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$121'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$121'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$118'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$118'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$115'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$115'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$112'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$112'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$109'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$109'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$106'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$106'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$103'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$103'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$100'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$100'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$97'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$97'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$94'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$94'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$91'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$91'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$88'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$88'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$85'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$85'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$82'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$82'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$79'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$79'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$76'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$76'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$73'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$73'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$70'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$70'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$67'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$67'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$64'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$64'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$61'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$61'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$58'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$58'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$55'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$55'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$52'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$52'.
+Found and cleaned up 2 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:155$49'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:155$49'.
+Found and cleaned up 1 empty switch in `\rv32i_core.$proc$rtl/rv32i_core.v:162$48'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:162$48'.
+Found and cleaned up 15 empty switches in `\rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+Removing empty process `rv32i_core.$proc$rtl/rv32i_core.v:53$18'.
+Cleaned up 78 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~14 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~6 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+<suppressed ~372 debug messages>
+Removed a total of 124 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$674.
+    dead port 2/2 on $mux $procmux$655.
+    dead port 2/2 on $mux $procmux$653.
+    dead port 2/2 on $mux $procmux$639.
+    dead port 2/2 on $mux $procmux$637.
+    dead port 2/2 on $mux $procmux$781.
+    dead port 2/2 on $mux $procmux$623.
+    dead port 2/2 on $mux $procmux$621.
+    dead port 2/2 on $mux $procmux$607.
+    dead port 2/2 on $mux $procmux$605.
+    dead port 2/2 on $mux $procmux$592.
+    dead port 2/2 on $mux $procmux$590.
+    dead port 2/2 on $mux $procmux$577.
+    dead port 2/2 on $mux $procmux$575.
+    dead port 2/2 on $mux $procmux$562.
+    dead port 2/2 on $mux $procmux$560.
+    dead port 1/2 on $mux $procmux$558.
+    dead port 2/2 on $mux $procmux$544.
+    dead port 2/2 on $mux $procmux$542.
+    dead port 1/2 on $mux $procmux$540.
+    dead port 2/2 on $mux $procmux$526.
+    dead port 2/2 on $mux $procmux$758.
+    dead port 2/2 on $mux $procmux$524.
+    dead port 1/2 on $mux $procmux$522.
+    dead port 2/2 on $mux $procmux$508.
+    dead port 2/2 on $mux $procmux$496.
+    dead port 2/2 on $mux $procmux$484.
+    dead port 2/2 on $mux $procmux$472.
+    dead port 2/2 on $mux $procmux$460.
+    dead port 2/2 on $mux $procmux$449.
+    dead port 2/2 on $mux $procmux$438.
+    dead port 2/2 on $mux $procmux$427.
+    dead port 2/2 on $mux $procmux$416.
+    dead port 2/2 on $mux $procmux$735.
+    dead port 2/2 on $mux $procmux$403.
+    dead port 2/2 on $mux $procmux$390.
+    dead port 2/2 on $mux $procmux$388.
+    dead port 2/2 on $mux $procmux$374.
+    dead port 2/2 on $mux $procmux$372.
+    dead port 2/2 on $mux $procmux$359.
+    dead port 2/2 on $mux $procmux$357.
+    dead port 2/2 on $mux $procmux$345.
+    dead port 2/2 on $mux $procmux$712.
+    dead port 2/2 on $mux $procmux$343.
+    dead port 2/2 on $mux $procmux$332.
+    dead port 2/2 on $mux $procmux$326.
+    dead port 2/2 on $mux $procmux$320.
+    dead port 2/2 on $mux $procmux$314.
+    dead port 2/2 on $mux $procmux$693.
+Removed 49 multiplexer ports.
+<suppressed ~39 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    New ctrl vector for $pmux cell $procmux$784: { $procmux$811_CMP $procmux$810_CMP $procmux$841_CMP $auto$opt_reduce.cc:134:opt_pmux$875 $procmux$814_CMP }
+    New ctrl vector for $pmux cell $procmux$770: $auto$opt_reduce.cc:134:opt_pmux$877
+    New ctrl vector for $pmux cell $procmux$747: $auto$opt_reduce.cc:134:opt_pmux$879
+    New ctrl vector for $pmux cell $procmux$411: $auto$opt_reduce.cc:134:opt_pmux$881
+    New ctrl vector for $pmux cell $procmux$724: { $procmux$780_CMP $procmux$779_CMP $procmux$778_CMP $procmux$777_CMP $procmux$776_CMP $procmux$775_CMP $procmux$774_CMP $procmux$773_CMP $auto$opt_reduce.cc:134:opt_pmux$883 }
+    New ctrl vector for $pmux cell $procmux$684: { $auto$opt_reduce.cc:134:opt_pmux$885 $procmux$705_CMP $procmux$704_CMP }
+    New ctrl vector for $pmux cell $procmux$703: { $auto$opt_reduce.cc:134:opt_pmux$887 $procmux$705_CMP $procmux$704_CMP }
+    New ctrl vector for $pmux cell $procmux$802: { $procmux$811_CMP $procmux$810_CMP $procmux$841_CMP $procmux$840_CMP $procmux$816_CMP $auto$opt_reduce.cc:134:opt_pmux$889 $procmux$814_CMP }
+  Optimizing cells in module \rv32i_core.
+Performed a total of 8 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$872 ($dff) from module rv32i_core (D = $procmux$293_Y, Q = \g_regfile[1].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$890 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[1].value).
+Adding SRST signal on $procdff$871 ($dff) from module rv32i_core (D = $procmux$288_Y, Q = \g_regfile[2].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$892 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[2].value).
+Adding SRST signal on $procdff$862 ($dff) from module rv32i_core (D = $procmux$243_Y, Q = \g_regfile[11].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$894 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[11].value).
+Adding SRST signal on $procdff$863 ($dff) from module rv32i_core (D = $procmux$248_Y, Q = \g_regfile[10].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$896 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[10].value).
+Adding SRST signal on $procdff$864 ($dff) from module rv32i_core (D = $procmux$253_Y, Q = \g_regfile[9].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$898 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[9].value).
+Adding SRST signal on $procdff$865 ($dff) from module rv32i_core (D = $procmux$258_Y, Q = \g_regfile[8].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$900 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[8].value).
+Adding SRST signal on $procdff$860 ($dff) from module rv32i_core (D = $procmux$233_Y, Q = \g_regfile[13].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$902 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[13].value).
+Adding SRST signal on $procdff$873 ($dff) from module rv32i_core (D = \next_pc, Q = \pc, rval = 0).
+Adding SRST signal on $procdff$851 ($dff) from module rv32i_core (D = $procmux$188_Y, Q = \g_regfile[22].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$905 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[22].value).
+Adding SRST signal on $procdff$866 ($dff) from module rv32i_core (D = $procmux$263_Y, Q = \g_regfile[7].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$907 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[7].value).
+Adding SRST signal on $procdff$852 ($dff) from module rv32i_core (D = $procmux$193_Y, Q = \g_regfile[21].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$909 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[21].value).
+Adding SRST signal on $procdff$867 ($dff) from module rv32i_core (D = $procmux$268_Y, Q = \g_regfile[6].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$911 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[6].value).
+Adding SRST signal on $procdff$868 ($dff) from module rv32i_core (D = $procmux$273_Y, Q = \g_regfile[5].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$913 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[5].value).
+Adding SRST signal on $procdff$853 ($dff) from module rv32i_core (D = $procmux$198_Y, Q = \g_regfile[20].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$915 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[20].value).
+Adding SRST signal on $procdff$869 ($dff) from module rv32i_core (D = $procmux$278_Y, Q = \g_regfile[4].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$917 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[4].value).
+Adding SRST signal on $procdff$854 ($dff) from module rv32i_core (D = $procmux$203_Y, Q = \g_regfile[19].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$919 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[19].value).
+Adding SRST signal on $procdff$870 ($dff) from module rv32i_core (D = $procmux$283_Y, Q = \g_regfile[3].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$921 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[3].value).
+Adding SRST signal on $procdff$855 ($dff) from module rv32i_core (D = $procmux$208_Y, Q = \g_regfile[18].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$923 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[18].value).
+Adding SRST signal on $procdff$842 ($dff) from module rv32i_core (D = $procmux$143_Y, Q = \g_regfile[31].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$925 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[31].value).
+Adding SRST signal on $procdff$856 ($dff) from module rv32i_core (D = $procmux$213_Y, Q = \g_regfile[17].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$927 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[17].value).
+Adding SRST signal on $procdff$843 ($dff) from module rv32i_core (D = $procmux$148_Y, Q = \g_regfile[30].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$929 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[30].value).
+Adding SRST signal on $procdff$844 ($dff) from module rv32i_core (D = $procmux$153_Y, Q = \g_regfile[29].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$931 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[29].value).
+Adding SRST signal on $procdff$845 ($dff) from module rv32i_core (D = $procmux$158_Y, Q = \g_regfile[28].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$933 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[28].value).
+Adding SRST signal on $procdff$857 ($dff) from module rv32i_core (D = $procmux$218_Y, Q = \g_regfile[16].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$935 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[16].value).
+Adding SRST signal on $procdff$846 ($dff) from module rv32i_core (D = $procmux$163_Y, Q = \g_regfile[27].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$937 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[27].value).
+Adding SRST signal on $procdff$849 ($dff) from module rv32i_core (D = $procmux$178_Y, Q = \g_regfile[24].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$939 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[24].value).
+Adding SRST signal on $procdff$847 ($dff) from module rv32i_core (D = $procmux$168_Y, Q = \g_regfile[26].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$941 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[26].value).
+Adding SRST signal on $procdff$848 ($dff) from module rv32i_core (D = $procmux$173_Y, Q = \g_regfile[25].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$943 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[25].value).
+Adding SRST signal on $procdff$858 ($dff) from module rv32i_core (D = $procmux$223_Y, Q = \g_regfile[15].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$945 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[15].value).
+Adding SRST signal on $procdff$859 ($dff) from module rv32i_core (D = $procmux$228_Y, Q = \g_regfile[14].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$947 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[14].value).
+Adding SRST signal on $procdff$850 ($dff) from module rv32i_core (D = $procmux$183_Y, Q = \g_regfile[23].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$949 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[23].value).
+Adding SRST signal on $procdff$861 ($dff) from module rv32i_core (D = $procmux$238_Y, Q = \g_regfile[12].value, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$951 ($sdff) from module rv32i_core (D = \write_data, Q = \g_regfile[12].value).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 63 unused cells and 473 unused wires.
+<suppressed ~66 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    New ctrl vector for $pmux cell $procmux$802: { $procmux$736_CMP $eq$rtl/rv32i_core.v:38$7_Y $auto$opt_reduce.cc:134:opt_pmux$954 $procmux$346_CMP $auto$opt_reduce.cc:134:opt_pmux$875 $procmux$315_CMP }
+  Optimizing cells in module \rv32i_core.
+Performed a total of 1 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+4.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+4.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+4.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+4.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+4.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+4.23. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing MEMORY pass.
+
+5.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+5.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+5.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+5.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+5.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+6.9. Finished OPT passes. (There is nothing left to do.)
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\rv32i_core": {
+         "num_wires":         246,
+         "num_wire_bits":     4769,
+         "num_pub_wires":     101,
+         "num_pub_wire_bits": 3911,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         196,
+         "num_cells_by_type": {
+            "$add": 7,
+            "$and": 2,
+            "$eq": 58,
+            "$ge": 1,
+            "$logic_and": 32,
+            "$logic_not": 3,
+            "$logic_or": 1,
+            "$lt": 3,
+            "$mux": 32,
+            "$ne": 1,
+            "$or": 1,
+            "$pmux": 10,
+            "$reduce_bool": 1,
+            "$reduce_or": 6,
+            "$sdff": 1,
+            "$sdffe": 31,
+            "$shiftx": 2,
+            "$shl": 1,
+            "$sshr": 1,
+            "$sub": 1,
+            "$xor": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         246,
+         "num_wire_bits":     4769,
+         "num_pub_wires":     101,
+         "num_pub_wire_bits": 3911,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         196,
+         "num_cells_by_type": {
+            "$add": 7,
+            "$and": 2,
+            "$eq": 58,
+            "$ge": 1,
+            "$logic_and": 32,
+            "$logic_not": 3,
+            "$logic_or": 1,
+            "$lt": 3,
+            "$mux": 32,
+            "$ne": 1,
+            "$or": 1,
+            "$pmux": 10,
+            "$reduce_bool": 1,
+            "$reduce_or": 6,
+            "$sdff": 1,
+            "$sdffe": 31,
+            "$shiftx": 2,
+            "$shl": 1,
+            "$sshr": 1,
+            "$sub": 1,
+            "$xor": 1
+         }
+      }
+}
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+7.1.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.5. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+
+7.6. Executing OPT pass (performing simple optimizations).
+
+7.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+7.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+7.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.6.9. Finished OPT passes. (There is nothing left to do.)
+
+7.7. Executing FSM pass (extract and optimize FSM).
+
+7.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+7.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+7.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+7.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+7.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+7.8. Executing OPT pass (performing simple optimizations).
+
+7.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+7.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+7.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.8.9. Finished OPT passes. (There is nothing left to do.)
+
+7.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 21 bits (of 32) from port B of cell rv32i_core.$shiftx$rtl/rv32i_core.v:0$3 ($shiftx).
+Removed top 21 bits (of 32) from port B of cell rv32i_core.$shiftx$rtl/rv32i_core.v:0$6 ($shiftx).
+Removed top 1 bits (of 33) from port Y of cell rv32i_core.$sshr$rtl/rv32i_core.v:49$17 ($sshr).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:93$23 ($eq).
+Removed top 29 bits (of 32) from port B of cell rv32i_core.$add$rtl/rv32i_core.v:130$40 ($add).
+Removed top 4 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$50 ($eq).
+Removed top 3 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$53 ($eq).
+Removed top 3 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$56 ($eq).
+Removed top 2 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$59 ($eq).
+Removed top 2 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$62 ($eq).
+Removed top 2 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$65 ($eq).
+Removed top 2 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$68 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$71 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$74 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$77 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$80 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$83 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$86 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$89 ($eq).
+Removed top 1 bits (of 5) from port B of cell rv32i_core.$eq$rtl/rv32i_core.v:157$92 ($eq).
+Removed top 2 bits (of 3) from port B of cell rv32i_core.$procmux$705_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell rv32i_core.$procmux$706_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell rv32i_core.$procmux$707_CMP0 ($eq).
+Removed top 1 bits (of 10) from port B of cell rv32i_core.$procmux$771_CMP0 ($eq).
+Removed top 7 bits (of 10) from port B of cell rv32i_core.$procmux$772_CMP0 ($eq).
+Removed top 9 bits (of 10) from port B of cell rv32i_core.$procmux$773_CMP0 ($eq).
+Removed top 8 bits (of 10) from port B of cell rv32i_core.$procmux$774_CMP0 ($eq).
+Removed top 8 bits (of 10) from port B of cell rv32i_core.$procmux$775_CMP0 ($eq).
+Removed top 7 bits (of 10) from port B of cell rv32i_core.$procmux$776_CMP0 ($eq).
+Removed top 7 bits (of 10) from port B of cell rv32i_core.$procmux$777_CMP0 ($eq).
+Removed top 7 bits (of 10) from port B of cell rv32i_core.$procmux$778_CMP0 ($eq).
+Removed top 1 bits (of 10) from port B of cell rv32i_core.$procmux$779_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell rv32i_core.$procmux$805_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$806_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell rv32i_core.$procmux$810_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$811_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell rv32i_core.$procmux$840_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell rv32i_core.$procmux$841_CMP0 ($eq).
+Removed top 31 bits (of 32) from wire rv32i_core.alu_slt.
+
+7.10. Executing PEEPOPT pass (run peephole optimizers).
+
+7.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module rv32i_core:
+  creating $macc model for $add$rtl/rv32i_core.v:109$27 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:119$35 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:124$36 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:126$38 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:130$40 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:131$41 ($add).
+  creating $macc model for $add$rtl/rv32i_core.v:39$9 ($add).
+  creating $macc model for $sub$rtl/rv32i_core.v:66$20 ($sub).
+  creating $alu model for $macc $sub$rtl/rv32i_core.v:66$20.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:39$9.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:131$41.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:130$40.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:126$38.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:124$36.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:119$35.
+  creating $alu model for $macc $add$rtl/rv32i_core.v:109$27.
+  creating $alu model for $ge$rtl/rv32i_core.v:119$34 ($ge): new $alu
+  creating $alu model for $lt$rtl/rv32i_core.v:118$32 ($lt): merged with $ge$rtl/rv32i_core.v:119$34.
+  creating $alu model for $lt$rtl/rv32i_core.v:43$13 ($lt): new $alu
+  creating $alu model for $lt$rtl/rv32i_core.v:44$14 ($lt): new $alu
+  creating $alu model for $eq$rtl/rv32i_core.v:116$28 ($eq): merged with $sub$rtl/rv32i_core.v:66$20.
+  creating $alu model for $ne$rtl/rv32i_core.v:117$30 ($ne): merged with $sub$rtl/rv32i_core.v:66$20.
+  creating $alu cell for $add$rtl/rv32i_core.v:109$27: $auto$alumacc.cc:485:replace_alu$959
+  creating $alu cell for $add$rtl/rv32i_core.v:119$35: $auto$alumacc.cc:485:replace_alu$962
+  creating $alu cell for $add$rtl/rv32i_core.v:124$36: $auto$alumacc.cc:485:replace_alu$965
+  creating $alu cell for $add$rtl/rv32i_core.v:126$38: $auto$alumacc.cc:485:replace_alu$968
+  creating $alu cell for $add$rtl/rv32i_core.v:130$40: $auto$alumacc.cc:485:replace_alu$971
+  creating $alu cell for $add$rtl/rv32i_core.v:131$41: $auto$alumacc.cc:485:replace_alu$974
+  creating $alu cell for $lt$rtl/rv32i_core.v:44$14: $auto$alumacc.cc:485:replace_alu$977
+  creating $alu cell for $lt$rtl/rv32i_core.v:43$13: $auto$alumacc.cc:485:replace_alu$982
+  creating $alu cell for $add$rtl/rv32i_core.v:39$9: $auto$alumacc.cc:485:replace_alu$989
+  creating $alu cell for $ge$rtl/rv32i_core.v:119$34, $lt$rtl/rv32i_core.v:118$32: $auto$alumacc.cc:485:replace_alu$992
+  creating $alu cell for $sub$rtl/rv32i_core.v:66$20, $eq$rtl/rv32i_core.v:116$28, $ne$rtl/rv32i_core.v:117$30: $auto$alumacc.cc:485:replace_alu$1007
+  created 11 $alu and 0 $macc cells.
+
+7.13. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module rv32i_core that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshr$rtl/rv32i_core.v:49$17 ($sshr):
+    Found 3 activation_patterns using ctrl signal { $procmux$736_CMP $auto$opt_reduce.cc:134:opt_pmux$883 $procmux$344_CMP $eq$rtl/rv32i_core.v:93$23_Y $eq$rtl/rv32i_core.v:88$21_Y $eq$rtl/rv32i_core.v:38$7_Y }.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl/rv32i_core.v:45$15 ($shl):
+    Found 2 activation_patterns using ctrl signal { $procmux$736_CMP $procmux$727_CMP $procmux$373_CMP $eq$rtl/rv32i_core.v:88$21_Y $eq$rtl/rv32i_core.v:38$7_Y }.
+    No candidates found.
+
+7.14. Executing OPT pass (performing simple optimizations).
+
+7.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~1 debug messages>
+
+7.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+7.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+7.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 1 unused cells and 7 unused wires.
+<suppressed ~2 debug messages>
+
+7.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+7.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+7.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.14.16. Finished OPT passes. (There is nothing left to do.)
+
+7.15. Executing MEMORY pass.
+
+7.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.17. Executing OPT pass (performing simple optimizations).
+
+7.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~22 debug messages>
+
+7.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$904 ($sdff) from module rv32i_core (D = \next_pc [0], Q = \pc [0]).
+Adding EN signal on $auto$ff.cc:266:slice$904 ($sdff) from module rv32i_core (D = \next_pc [1], Q = \pc [1]).
+
+7.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 1 unused cells and 6 unused wires.
+<suppressed ~2 debug messages>
+
+7.17.5. Rerunning OPT passes. (Removed registers in this run.)
+
+7.17.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~3 debug messages>
+
+7.17.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+7.17.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+7.17.10. Finished fast OPT passes.
+
+7.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+7.19. Executing OPT pass (performing simple optimizations).
+
+7.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+7.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $mux cell $procmux$341:
+      Old ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 2'x }, B={ $add$rtl/rv32i_core.v:116$29_Y [31:1] 1'x }, Y=$6\next_pc[31:0]
+      New ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 1'x }, B=$add$rtl/rv32i_core.v:116$29_Y [31:1], Y=$6\next_pc[31:0] [31:1]
+      New connections: $6\next_pc[31:0] [0] = 1'x
+    Consolidated identical input bits for $mux cell $procmux$355:
+      Old ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 2'x }, B={ $add$rtl/rv32i_core.v:116$29_Y [31:1] 1'x }, Y=$5\next_pc[31:0]
+      New ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 1'x }, B=$add$rtl/rv32i_core.v:116$29_Y [31:1], Y=$5\next_pc[31:0] [31:1]
+      New connections: $5\next_pc[31:0] [0] = 1'x
+    Consolidated identical input bits for $mux cell $procmux$370:
+      Old ports: A={ $add$rtl/rv32i_core.v:116$29_Y [31:1] 1'x }, B={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 2'x }, Y=$4\next_pc[31:0]
+      New ports: A=$add$rtl/rv32i_core.v:116$29_Y [31:1], B={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 1'x }, Y=$4\next_pc[31:0] [31:1]
+      New connections: $4\next_pc[31:0] [0] = 1'x
+    Consolidated identical input bits for $mux cell $procmux$386:
+      Old ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 2'x }, B={ $add$rtl/rv32i_core.v:116$29_Y [31:1] 1'x }, Y=$3\next_pc[31:0]
+      New ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 1'x }, B=$add$rtl/rv32i_core.v:116$29_Y [31:1], Y=$3\next_pc[31:0] [31:1]
+      New connections: $3\next_pc[31:0] [0] = 1'x
+  Optimizing cells in module \rv32i_core.
+    Consolidated identical input bits for $pmux cell $procmux$398:
+      Old ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 2'x }, B={ $3\next_pc[31:0] $4\next_pc[31:0] $5\next_pc[31:0] $6\next_pc[31:0] }, Y=$2\next_pc[31:0]
+      New ports: A={ $add$rtl/rv32i_core.v:126$37_Y [31:2] 1'x }, B={ $3\next_pc[31:0] [31:1] $4\next_pc[31:0] [31:1] $5\next_pc[31:0] [31:1] $6\next_pc[31:0] [31:1] }, Y=$2\next_pc[31:0] [31:1]
+      New connections: $2\next_pc[31:0] [0] = 1'x
+  Optimizing cells in module \rv32i_core.
+Performed a total of 5 changes.
+
+7.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.19.6. Executing OPT_SHARE pass.
+
+7.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \rv32i_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+7.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \rv32i_core.
+Performed a total of 0 changes.
+
+7.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.19.14. Executing OPT_SHARE pass.
+
+7.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+
+7.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+
+7.19.18. Finished OPT passes. (There is nothing left to do.)
+
+7.20. Executing TECHMAP pass (map to technology primitives).
+
+7.20.1. Executing Verilog-2005 frontend: /workspace/scratch/ad3b43446288/toolchain/root/usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/workspace/scratch/ad3b43446288/toolchain/root/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+7.20.2. Continuing TECHMAP pass.
+Using template $paramod$constmap:27416298eff2bef5b024d2c6ba87bd3d61407e73$paramod$643904d1117666f8543a6997188cd73545d1d66a\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$2653f68ddb8eab7b1907b4a20767b72a824a7a36\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:87f69c0bea22f84de4bcd0314b57cb19e61b5eb7$paramod$455891ae50d34e43581a517459d55825f76fa58e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$ebf89ea36a793f0f77858f212141d47c833068ad\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$6fc37af1c109ae54e8aed83fcd995c12d378ce93\_90_alu for cells of type $alu.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$0ae36a7056fbae1b1191049d3533163e46c0843a\_90_pmux for cells of type $pmux.
+Using template $paramod$49f1dc3dcd6d2c748486fe94c6744a34a19bbafe\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$80834bdd89ff0e27a02312429a7cc3a2e63489a8\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$2407ada40cc3dda6c6015be2b49b748cddb5a800\_90_pmux for cells of type $pmux.
+Using template $paramod$eaeb96106163dbf82031649d189817109fe07c69\_90_pmux for cells of type $pmux.
+Using template $paramod$54d740639e1393b22262823179ff783ea9f17a35\_90_pmux for cells of type $pmux.
+Using template $paramod$8fabc56b80a569262acfc42757a02ca0b8e91278\_90_pmux for cells of type $pmux.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011111 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3829 debug messages>
+
+7.21. Executing OPT pass (performing simple optimizations).
+
+7.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~11771 debug messages>
+
+7.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+<suppressed ~4011 debug messages>
+Removed a total of 1337 cells.
+
+7.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 8422 unused cells and 1887 unused wires.
+<suppressed ~8423 debug messages>
+
+7.21.5. Finished fast OPT passes.
+
+7.22. Executing ABC pass (technology mapping using ABC).
+
+7.22.1. Extracting gate netlist of module `\rv32i_core' to `<abc-temp-dir>/input.blif'..
+Extracted 6520 gates and 7611 wires to a netlist network with 1088 inputs and 163 outputs.
+
+7.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.22.1.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:      124
+ABC RESULTS:               NOT cells:      191
+ABC RESULTS:               XOR cells:      266
+ABC RESULTS:               NOR cells:      241
+ABC RESULTS:             ORNOT cells:      155
+ABC RESULTS:               MUX cells:     2518
+ABC RESULTS:              NAND cells:      177
+ABC RESULTS:            ANDNOT cells:     1757
+ABC RESULTS:               AND cells:      163
+ABC RESULTS:                OR cells:      949
+ABC RESULTS:              ZERO cells:        1
+ABC RESULTS:        internal signals:     6360
+ABC RESULTS:           input signals:     1088
+ABC RESULTS:          output signals:      163
+Removing temp directory.
+
+7.23. Executing OPT pass (performing simple optimizations).
+
+7.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~1004 debug messages>
+
+7.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$3633 ($_SDFFE_PP0P_) from module rv32i_core.
+
+7.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 20 unused cells and 2537 unused wires.
+<suppressed ~33 debug messages>
+
+7.23.5. Rerunning OPT passes. (Removed registers in this run.)
+
+7.23.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module rv32i_core.
+<suppressed ~1 debug messages>
+
+7.23.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\rv32i_core'.
+Removed a total of 0 cells.
+
+7.23.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \rv32i_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.23.10. Finished fast OPT passes.
+
+7.24. Executing HIERARCHY pass (managing design hierarchy).
+
+7.24.1. Analyzing design hierarchy..
+Top module:  \rv32i_core
+
+7.24.2. Analyzing design hierarchy..
+Top module:  \rv32i_core
+Removed 0 unused modules.
+
+7.25. Printing statistics.
+
+=== rv32i_core ===
+
+   Number of wires:               6480
+   Number of wire bits:           9948
+   Number of public wires:          89
+   Number of public wire bits:    3557
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7543
+     $_ANDNOT_                    1750
+     $_AND_                        163
+     $_MUX_                       2518
+     $_NAND_                       177
+     $_NOR_                        240
+     $_NOT_                        185
+     $_ORNOT_                      155
+     $_OR_                         942
+     $_SDFFE_PP0P_                 993
+     $_SDFF_PP0_                    30
+     $_XNOR_                       124
+     $_XOR_                        266
+
+7.26. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module rv32i_core...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\rv32i_core": {
+         "num_wires":         6480,
+         "num_wire_bits":     9948,
+         "num_pub_wires":     89,
+         "num_pub_wire_bits": 3557,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7543,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1750,
+            "$_AND_": 163,
+            "$_MUX_": 2518,
+            "$_NAND_": 177,
+            "$_NOR_": 240,
+            "$_NOT_": 185,
+            "$_ORNOT_": 155,
+            "$_OR_": 942,
+            "$_SDFFE_PP0P_": 993,
+            "$_SDFF_PP0_": 30,
+            "$_XNOR_": 124,
+            "$_XOR_": 266
+         }
+      }
+   },
+      "design": {
+         "num_wires":         6480,
+         "num_wire_bits":     9948,
+         "num_pub_wires":     89,
+         "num_pub_wire_bits": 3557,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7543,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1750,
+            "$_AND_": 163,
+            "$_MUX_": 2518,
+            "$_NAND_": 177,
+            "$_NOR_": 240,
+            "$_NOT_": 185,
+            "$_ORNOT_": 155,
+            "$_OR_": 942,
+            "$_SDFFE_PP0P_": 993,
+            "$_SDFF_PP0_": 30,
+            "$_XNOR_": 124,
+            "$_XOR_": 266
+         }
+      }
+}
+
+9. Executing Verilog backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+Dumping module `\rv32i_core'.
+
+10. Executing JSON backend.

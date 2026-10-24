@@ -1,0 +1,27 @@
+{
+  "seed": 20261023,
+  "instruction_vectors": 33302,
+  "result_checks": 6801,
+  "checks_by_operation": {
+    "ADD": 305,
+    "SUB": 305,
+    "AND": 305,
+    "OR": 305,
+    "XOR": 305,
+    "SLT": 305,
+    "SLTU": 305,
+    "SLL": 305,
+    "SRL": 305,
+    "SRA": 305,
+    "ADDI": 225,
+    "ANDI": 225,
+    "ORI": 225,
+    "XORI": 225,
+    "SLTI": 225,
+    "SLTIU": 225,
+    "SLLI": 800,
+    "SRLI": 800,
+    "SRAI": 800,
+    "x0_write_ignored": 1
+  }
+}

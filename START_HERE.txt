@@ -1,0 +1,17 @@
+RV32I PROCESSOR v4 — START HERE
+
+1. Open PROJECT_GUIDE.md for the complete explanation of the project and code.
+2. Read docs/yosys_windows.md to make Yosys available on Windows.
+3. In this folder, open Command Prompt and run:
+
+   run_synthesis_windows.bat
+
+4. Success ends with FLOW PASSED: all.
+5. Read build/synth/resource_analysis.md for your measured results.
+
+RTL-only test command: run_windows.bat
+Recorded validated results: reports/2026-10-23/
+GitHub release target: 30 October 2026.
+
+This is a verified 29-instruction RV32I subset, not complete RV32I compliance.
+Full code, tests, original baseline, instructions and reports are included.

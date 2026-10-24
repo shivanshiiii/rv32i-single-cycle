@@ -1,0 +1,13 @@
+read_verilog baseline/rv32i_core.v
+hierarchy -check -top rv32i_core
+proc
+opt
+memory -nomap
+opt
+tee -o build/synth/baseline/coarse.json stat -json
+synth -top rv32i_core
+check -assert
+select -assert-none t:$dlatch t:$_DLATCH_*
+tee -o build/synth/baseline/stats.json stat -json
+write_verilog -noattr build/synth/baseline/rv32i_core_netlist.v
+write_json build/synth/baseline/netlist.json

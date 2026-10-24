@@ -1,0 +1,4 @@
+Python 3.12.14
+Icarus Verilog version 12.0 (stable) ()
+Icarus Verilog runtime version 12.0 (stable) ()
+Yosys 0.33 (git sha1 2584903a060)

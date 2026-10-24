@@ -1,0 +1,2 @@
+ALU TEST PASSED: 33302 instruction vectors; 6801 result checks
+tb/tb_core_alu.v:45: $finish called at 333050000 (1ps)

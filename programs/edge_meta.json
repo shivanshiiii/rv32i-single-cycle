@@ -1,0 +1,17 @@
+{
+  "halt_pc": 208,
+  "labels": {
+    "nt_beq": 96,
+    "nt_bne": 104,
+    "nt_blt": 112,
+    "nt_bge": 120,
+    "taken_eq": 128,
+    "taken_ne": 136,
+    "taken_lt": 144,
+    "taken_ge": 152,
+    "count_loop": 156,
+    "forward_jump": 192,
+    "halt": 208
+  },
+  "instruction_count": 53
+}

@@ -1,0 +1,55 @@
+Python 3.12.14
+Icarus Verilog version 12.0 (stable) ()
+Icarus Verilog runtime version 12.0 (stable) ()
+Yosys 0.33 (git sha1 2584903a060)
+
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/build_program.py
+Generated 41 instructions; halt @ byte address 160.
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/reference_model.py
+PASS: Python demo reference: 34 executed instructions, 32 registers, RAM[3]
+NOTE: Python reference is NOT an RTL simulation.
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/build_edge_program.py
+Generated edge-case ROM: 53 instructions, halt PC=208.
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/edge_reference.py
+PASS: Python edge reference: 50 executed instructions, 32 registers, 11 branch outcomes, RAM[7]
+NOTE: Python reference is NOT an RTL simulation.
++ /workspace/scratch/ad3b43446288/toolchain/bin/iverilog -g2012 -Wall -I tb -s tb_soc -o build/tb_soc.vvp rtl/rv32i_core.v rtl/rv32i_soc.v tb/tb_soc.v
++ /workspace/scratch/ad3b43446288/toolchain/bin/vvp build/tb_soc.vvp
+TEST PASSED: 34 cycles, RV32I demo program
++ /workspace/scratch/ad3b43446288/toolchain/bin/iverilog -g2012 -Wall -I tb -s tb_soc_edge -o build/tb_soc_edge.vvp rtl/rv32i_core.v rtl/rv32i_soc.v tb/tb_soc_edge.v
++ /workspace/scratch/ad3b43446288/toolchain/bin/vvp build/tb_soc_edge.vvp
+EDGE TEST PASSED: 50 instruction steps; signed, unsigned, branch, loop, jump and RAM checks
++ /workspace/scratch/ad3b43446288/toolchain/bin/iverilog -g2012 -Wall -I tb -s tb_core_decode -o build/tb_core_decode.vvp rtl/rv32i_core.v tb/tb_core_decode.v
++ /workspace/scratch/ad3b43446288/toolchain/bin/vvp build/tb_core_decode.vvp
+DECODE TEST PASSED: 11 steps; illegal encodings, alignment, x0, reset
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/build_alu_vectors.py
+Generated 33302 instruction vectors; 6801 result checks
++ /workspace/scratch/ad3b43446288/toolchain/bin/iverilog -g2012 -Wall -I tb -s tb_core_alu -DALU_VECTOR_COUNT=33302 -o build/tb_core_alu.vvp rtl/rv32i_core.v tb/tb_core_alu.v
++ /workspace/scratch/ad3b43446288/toolchain/bin/vvp build/tb_core_alu.vvp
+ALU TEST PASSED: 33302 instruction vectors; 6801 result checks
+RTL REGRESSION PASSED: four testbenches
++ /workspace/scratch/ad3b43446288/toolchain/bin/yosys -Q -T -l build/synth/baseline/synthesis.log -s build/synth/baseline/run.ys
++ /workspace/scratch/ad3b43446288/toolchain/bin/yosys -Q -T -l build/synth/optimized/synthesis.log -s build/synth/optimized/run.ys
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/summarize_synthesis.py
+# Generic synthesis resource comparison
+
+Core only; generic ABC gate mapping; external instruction/data RAM excluded.
+
+| Metric | Baseline v3 | Optimized v4 |
+|---|---:|---:|
+| Total generic cells | 8003 | 7543 |
+| Flip-flops | 1055 | 1023 |
+| Combinational cells | 6948 | 6520 |
+| Latches | 0 | 0 |
+
+Total generic cell reduction: **5.75%**.
+
+SYNTHESIS PASSED: baseline and optimized core
++ /workspace/scratch/ad3b43446288/toolchain/bin/yosys -Q -T -l build/equivalence.log -s synth/equivalence.ys
+EQUIVALENCE PASSED: optimized RTL versus preserved baseline
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 tools/build_alu_vectors.py
+Generated 33302 instruction vectors; 6801 result checks
++ /workspace/scratch/ad3b43446288/toolchain/bin/iverilog -g2012 -Wall -I tb -s tb_core_alu -DALU_VECTOR_COUNT=33302 -o build/tb_core_alu.vvp build/synth/optimized/rv32i_core_netlist.v tb/tb_core_alu.v
++ /workspace/scratch/ad3b43446288/toolchain/bin/vvp build/tb_core_alu.vvp
+ALU TEST PASSED: 33302 instruction vectors; 6801 result checks
+FLOW PASSED: all

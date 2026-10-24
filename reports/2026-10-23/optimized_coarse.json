@@ -1,0 +1,73 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a060)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\rv32i_core": {
+         "num_wires":         246,
+         "num_wire_bits":     4769,
+         "num_pub_wires":     101,
+         "num_pub_wire_bits": 3911,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         196,
+         "num_cells_by_type": {
+            "$add": 7,
+            "$and": 2,
+            "$eq": 58,
+            "$ge": 1,
+            "$logic_and": 32,
+            "$logic_not": 3,
+            "$logic_or": 1,
+            "$lt": 3,
+            "$mux": 32,
+            "$ne": 1,
+            "$or": 1,
+            "$pmux": 10,
+            "$reduce_bool": 1,
+            "$reduce_or": 6,
+            "$sdff": 1,
+            "$sdffe": 31,
+            "$shiftx": 2,
+            "$shl": 1,
+            "$sshr": 1,
+            "$sub": 1,
+            "$xor": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         246,
+         "num_wire_bits":     4769,
+         "num_pub_wires":     101,
+         "num_pub_wire_bits": 3911,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         196,
+         "num_cells_by_type": {
+            "$add": 7,
+            "$and": 2,
+            "$eq": 58,
+            "$ge": 1,
+            "$logic_and": 32,
+            "$logic_not": 3,
+            "$logic_or": 1,
+            "$lt": 3,
+            "$mux": 32,
+            "$ne": 1,
+            "$or": 1,
+            "$pmux": 10,
+            "$reduce_bool": 1,
+            "$reduce_or": 6,
+            "$sdff": 1,
+            "$sdffe": 31,
+            "$shiftx": 2,
+            "$shl": 1,
+            "$sshr": 1,
+            "$sub": 1,
+            "$xor": 1
+         }
+      }
+}
+

@@ -1,0 +1,3 @@
+VCD info: dumpfile build/rv32i_decode.vcd opened for output.
+DECODE TEST PASSED: 11 steps; illegal encodings, alignment, x0, reset
+tb/tb_core_decode.v:79: $finish called at 136000 (1ps)

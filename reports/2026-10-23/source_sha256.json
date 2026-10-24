@@ -1,0 +1,22 @@
+{
+  "baseline/rv32i_core.v": "1c9cb8146259818339b9168758e0fb326b2ce0fe796ab788375cc490c7f80c34",
+  "rtl/rv32i_core.v": "3f1f8bcf3d2b71513312ab70cdbe2920660e6209f7afe97d090a4072eb7386c3",
+  "rtl/rv32i_soc.v": "853d34294741d6d0d04a4837983a7f1c97e84f3f749150788e63572fa5d6f480",
+  "synth/equivalence.ys": "f3406abe90dd49cdaa92d43138e0025c7473984375e820f83b3f7fac4fa61044",
+  "tb/demo_expected.vh": "0f52a078a4f7d22707c70103a102d44d2f76997cf1209fc65543f93a14890f49",
+  "tb/edge_expected.vh": "0ac5caa882b046b10a25a8b28ea911afc96165d9ee07c6a429ac7ffaaf5d57ea",
+  "tb/edge_trace_expected.vh": "014661d8d9466fd1a2484a3fad9577bb6d009efd29713ec63eda77f7cdeab6a5",
+  "tb/tb_core_alu.v": "5791643e9c2bd5d23e0445e4c2f7ed918833360c70fa21ac0124f570bfa6e155",
+  "tb/tb_core_decode.v": "f8778e5e8555aafcefcdfc03221da97b6a9f1164d8d904a4a28adca736da4225",
+  "tb/tb_soc.v": "22700e5490aafaae7ba9573a23d3a8f14ebc3e7f3d87f06164b5366716a70e0d",
+  "tb/tb_soc_edge.v": "ac4fe4b45514a04a6ca7b670ff1c3ea7520f7c4e2962abba2a55559e201562d3",
+  "tools/build_alu_vectors.py": "fd4344cdced66890d4d1ac02812045f7d64cf9a1e3e43ed788dc90f948cb8ea2",
+  "tools/build_edge_program.py": "24408d0be737eed7c2f5ffe93b913ced66e9e47ce887c04d74f45af68d0b749e",
+  "tools/build_program.py": "1f48b2268b57cf699b8739913527f21241caec17fe699ba9d0ab6be235f95b4e",
+  "tools/edge_reference.py": "eb34c4a0866f19669f567dbe353f22fdac5f94500dfd0d09a72dd9d827243da5",
+  "tools/isa_reference.py": "ef36766dec5b32830f5c2e4f142b9fba9111920a15b5c9fe510c286b1a0d4d23",
+  "tools/reference_model.py": "b26600747dd128fc477d6899404dfc9be3f0529fbe71b14f8c0afb629c1760b8",
+  "tools/run_flow.py": "b6e91343b649c34ba8b5a2aa82bbce660ed724fb2efe80fe5cd929822e06632f",
+  "tools/rv32i_encode.py": "47f9988bafb3dcc4294ca229fb3c2d908713a1ed5238eb2734f76d6f5b55ef5d",
+  "tools/summarize_synthesis.py": "b00bdb221aa73768316b86449cf29efc7f66f8e2d9ca51d71b0af9fafd6120a3"
+}

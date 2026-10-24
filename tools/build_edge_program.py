@@ -1,0 +1,156 @@
+#!/usr/bin/env python3
+"""Generate a second directed ROM emphasizing RV32I signedness and branch edge cases."""
+from pathlib import Path
+import json
+from rv32i_encode import r, i, shift_i, s, b, u, j
+
+ROOT = Path(__file__).resolve().parents[1]
+program = []
+labels = {}
+
+def label(name):
+    if name in labels:
+        raise ValueError(f'duplicate label: {name}')
+    labels[name] = len(program) * 4
+
+def emit(op, *args):
+    program.append((op, args))
+
+# Signed/unsigned comparison and immediate sign extension.
+emit('addi', 1, 0, -1)
+emit('addi', 2, 0, 1)
+emit('slt', 3, 1, 2)          # signed -1 < +1
+emit('sltu', 4, 1, 2)         # unsigned FFFFFFFF > 1
+emit('slti', 5, 1, 0)
+emit('sltiu', 6, 1, -1)       # equal unsigned operands
+emit('sltiu', 7, 2, -1)       # sign-extended immediate is FFFFFFFF
+emit('srai', 8, 1, 31)
+emit('srli', 9, 1, 31)
+emit('slli', 10, 2, 31)
+emit('sra', 11, 10, 2)
+emit('srl', 12, 10, 2)
+emit('add', 13, 1, 2)         # 32-bit wraparound to zero
+emit('sub', 14, 0, 2)
+emit('addi', 15, 0, -2048)   # minimum I-immediate
+emit('addi', 16, 0, 2047)    # maximum I-immediate
+emit('andi', 17, 1, -2048)
+emit('ori', 18, 0, -1)
+emit('xori', 19, 1, -1)
+emit('sll', 20, 2, 1)         # register shift amount masked to 5 bits
+emit('srl', 21, 1, 1)
+emit('sra', 22, 1, 1)
+
+# All four supported branches must FALL THROUGH, so x23 accumulates 1+2+4+8.
+emit('beq', 1, 2, 'nt_beq')
+emit('addi', 23, 23, 1)
+label('nt_beq')
+emit('bne', 1, 1, 'nt_bne')
+emit('addi', 23, 23, 2)
+label('nt_bne')
+emit('blt', 2, 1, 'nt_blt')
+emit('addi', 23, 23, 4)
+label('nt_blt')
+emit('bge', 1, 2, 'nt_bge')
+emit('addi', 23, 23, 8)
+label('nt_bge')
+
+# All four branches must be TAKEN; each following x24 write is skipped.
+emit('beq', 1, 1, 'taken_eq')
+emit('addi', 24, 0, 99)
+label('taken_eq')
+emit('bne', 1, 2, 'taken_ne')
+emit('addi', 24, 0, 98)
+label('taken_ne')
+emit('blt', 1, 2, 'taken_lt')
+emit('addi', 24, 0, 97)
+label('taken_lt')
+emit('bge', 2, 1, 'taken_ge')
+emit('addi', 24, 0, 96)
+label('taken_ge')
+
+# Backward negative branch offset and a finite loop.
+emit('addi', 25, 0, 3)
+label('count_loop')
+emit('addi', 25, 25, -1)
+emit('bne', 25, 0, 'count_loop')
+emit('addi', 26, 0, 1)
+
+# Negative memory offset; 32-bit data must be preserved.
+emit('addi', 27, 0, 32)
+emit('sw', 10, 27, -4)
+emit('lw', 28, 27, -4)
+emit('addi', 0, 0, 99)        # x0 is hardwired zero
+
+# JAL and JALR; JALR deliberately has odd immediate, testing bit-zero clearing.
+emit('jal', 29, 'forward_jump')
+emit('addi', 30, 0, 99)      # skipped
+label('forward_jump')
+emit('auipc', 30, 0)
+emit('jalr', 31, 30, 13)     # (auipc_pc + 13) & ~1 == auipc_pc + 12
+emit('addi', 30, 0, 98)      # skipped
+emit('addi', 27, 27, 1)      # jump target: x27 = 33
+label('halt')
+emit('jal', 0, 'halt')
+
+r_f3 = {'add': (0, 0), 'sub': (32, 0), 'and': (0, 7), 'or': (0, 6),
+        'xor': (0, 4), 'slt': (0, 2), 'sltu': (0, 3), 'sll': (0, 1),
+        'srl': (0, 5), 'sra': (32, 5)}
+i_f3 = {'addi': 0, 'andi': 7, 'ori': 6, 'xori': 4, 'slti': 2, 'sltiu': 3}
+branch_f3 = {'beq': 0, 'bne': 1, 'blt': 4, 'bge': 5}
+words, listing = [], []
+for index, (op, args) in enumerate(program):
+    pc = index * 4
+    if op in r_f3:
+        rd, rs1, rs2 = args
+        f7, f3 = r_f3[op]
+        word = r(f7, rs2, rs1, f3, rd)
+    elif op in i_f3:
+        rd, rs1, imm = args
+        word = i(imm, rs1, i_f3[op], rd)
+    elif op in ('slli', 'srli', 'srai'):
+        rd, rs1, shamt = args
+        f7, f3 = (32, 5) if op == 'srai' else ((0, 1) if op == 'slli' else (0, 5))
+        word = shift_i(f7, shamt, rs1, f3, rd)
+    elif op == 'lw':
+        rd, rs1, imm = args
+        word = i(imm, rs1, 2, rd, 0x03)
+    elif op == 'sw':
+        rs2, rs1, imm = args
+        word = s(imm, rs2, rs1)
+    elif op in branch_f3:
+        rs1, rs2, target = args
+        word = b(labels[target] - pc, rs2, rs1, branch_f3[op])
+    elif op == 'lui':
+        rd, imm = args
+        word = u(imm, rd, 0x37)
+    elif op == 'auipc':
+        rd, imm = args
+        word = u(imm, rd, 0x17)
+    elif op == 'jal':
+        rd, target = args
+        word = j(labels[target] - pc, rd)
+    elif op == 'jalr':
+        rd, rs1, imm = args
+        word = i(imm, rs1, 0, rd, 0x67)
+    else:
+        raise ValueError(op)
+    words.append(word)
+    listing.append(f'{pc:04x}: {word:08x}  {op} ' + ', '.join(map(str, args)))
+
+out = ROOT / 'programs'
+out.mkdir(exist_ok=True)
+assert len(words) <= 256, 'Edge program exceeds instruction memory'
+rom_words = words + [0x00000013] * (256 - len(words))
+(out / 'edge.hex').write_text('\n'.join(f'{word:08x}' for word in rom_words) + '\n')
+(out / 'edge.lst').write_text('\n'.join(listing) + '\n')
+(out / 'edge_meta.json').write_text(json.dumps({
+    'halt_pc': labels['halt'], 'labels': labels, 'instruction_count': len(words)
+}, indent=2) + '\n')
+(ROOT / 'tb' / 'edge_expected.vh').write_text(
+    '// Generated by tools/build_edge_program.py; do not edit manually.\n'
+    + f"localparam [31:0] EDGE_HALT_PC = 32'd{labels['halt']};\n"
+    + f"localparam [31:0] EDGE_JAL_LINK = 32'd{labels['forward_jump'] - 4};\n"
+    + f"localparam [31:0] EDGE_AUIPC_PC = 32'd{labels['forward_jump']};\n"
+    + f"localparam [31:0] EDGE_JALR_LINK = 32'd{labels['forward_jump'] + 8};\n"
+)
+print(f'Generated edge-case ROM: {len(words)} instructions, halt PC={labels["halt"]}.')

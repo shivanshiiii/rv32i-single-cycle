@@ -1,0 +1,37 @@
+name: RTL, Synthesis and Equivalence
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install HDL tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends iverilog yosys
+      - name: Run complete validation
+        run: python3 tools/run_flow.py all
+      - name: Upload measured evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rv32i-validation
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            build/logs/
+            build/synth/
+            build/equivalence.log
+            build/tool_versions.txt
+            build/source_sha256.json
+            build/alu_vectors.json
+            build/*.vcd

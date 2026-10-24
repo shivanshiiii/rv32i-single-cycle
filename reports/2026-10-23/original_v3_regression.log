@@ -1,0 +1,63 @@
+python3 tools/build_program.py
+Generated 41 instructions; halt @ byte address 160.
+python3 tools/reference_model.py
+PASS: Python demo reference: 34 executed instructions, 32 registers, RAM[3]
+NOTE: Python reference is NOT an RTL simulation.
+python3 tools/build_edge_program.py
+Generated edge-case ROM: 53 instructions, halt PC=208.
+python3 tools/edge_reference.py
+PASS: Python edge reference: 50 executed instructions, 32 registers, 11 branch outcomes, RAM[7]
+NOTE: Python reference is NOT an RTL simulation.
+python3 -m compileall -q tools
+mkdir -p build
+iverilog -g2012 -Wall -I tb -s tb_soc -o build/rv32i_sim rtl/rv32i_core.v rtl/rv32i_soc.v tb/tb_soc.v
+vvp build/rv32i_sim
+WARNING: rtl/rv32i_soc.v:37: $readmemh(programs/demo.hex): Not enough words in the file for the requested range [0:255].
+VCD info: dumpfile build/rv32i.vcd opened for output.
+PASS x0 = 00000000
+PASS x1 = 00000007
+PASS x2 = 00000005
+PASS x3 = 0000000c
+PASS x4 = 00000002
+PASS x5 = 00000005
+PASS x6 = 00000007
+PASS x7 = 00000002
+PASS x8 = 00000280
+PASS x9 = 00000005
+PASS x10 = 00000001
+PASS x11 = 00000014
+PASS x12 = fffffff8
+PASS x13 = fffffffe
+PASS x14 = 00000003
+PASS x15 = 00000007
+PASS x16 = 00000004
+PASS x17 = 00000001
+PASS x18 = 00000014
+PASS x19 = 0000000a
+PASS x20 = 0000000c
+PASS x21 = 00000000
+PASS x22 = 12345000
+PASS x23 = 00001068
+PASS x24 = 00000070
+PASS x25 = 00000000
+PASS x26 = 0000007c
+PASS x27 = 00000080
+PASS x28 = 00000001
+PASS x29 = 00000001
+PASS x30 = fffffffe
+PASS x31 = ffffffff
+TEST PASSED: 34 cycles, RV32I demo program
+tb/tb_soc.v:91: $finish called at 370000 (1ps)
+mkdir -p build
+iverilog -g2012 -Wall -I tb -s tb_soc_edge -o build/rv32i_edge_sim rtl/rv32i_core.v rtl/rv32i_soc.v tb/tb_soc_edge.v
+vvp build/rv32i_edge_sim
+WARNING: rtl/rv32i_soc.v:37: $readmemh(programs/edge.hex): Not enough words in the file for the requested range [0:255].
+VCD info: dumpfile build/rv32i_edge.vcd opened for output.
+EDGE TEST PASSED: 50 instruction steps; signed, unsigned, branch, loop, jump and RAM checks
+tb/tb_soc_edge.v:92: $finish called at 530000 (1ps)
+mkdir -p build
+iverilog -g2012 -Wall -I tb -s tb_core_decode -o build/rv32i_decode_sim rtl/rv32i_core.v tb/tb_core_decode.v
+vvp build/rv32i_decode_sim
+VCD info: dumpfile build/rv32i_decode.vcd opened for output.
+DECODE TEST PASSED: 11 steps; illegal encodings, alignment, x0, reset
+tb/tb_core_decode.v:79: $finish called at 136000 (1ps)
