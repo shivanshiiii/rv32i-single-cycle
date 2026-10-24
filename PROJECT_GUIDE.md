@@ -353,7 +353,7 @@ The original testbenches provide stable hierarchy names for PC/register observat
 
 ## 14. GitHub and resume handoff
 
-The planned repository name is `rv32i-single-cycle` under the connected account `shivanshiiii`. Source, documentation, selected evidence and CI configuration are ready. Repository creation/public visibility currently requires explicit approval; this package has not yet been pushed and hosted Actions has not run.
+The public repository is [shivanshiiii/rv32i-single-cycle](https://github.com/shivanshiiii/rv32i-single-cycle), published on 24 October 2026. Source, documentation, recorded evidence and CI configuration are committed. See [GitHub Actions](https://github.com/shivanshiiii/rv32i-single-cycle/actions) for hosted validation results.
 
 Commit source/docs and `reports/`, excluding `build/` and installed tool binaries. Once published, run the workflow, link the actual successful run and tag the checked release. See `docs/github_checklist.md`.
 

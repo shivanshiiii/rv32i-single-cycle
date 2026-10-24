@@ -2,7 +2,7 @@
 
 A Verilog implementation of a **29-instruction RV32I subset**, with reproducible simulation, generic Yosys synthesis, and RTL equivalence checking. Single-cycle execution uses external asynchronous-read instruction/data memory.
 
-**Release v4 — 23 October 2026. Deadline: 30 October 2026.**
+**Release v4 — 23 October 2026. Published on GitHub: 24 October 2026.**
 
 For a complete beginner walkthrough, start with [PROJECT_GUIDE.md](PROJECT_GUIDE.md).
 
@@ -33,7 +33,7 @@ Tool versions: **Icarus Verilog 12.0**, **Yosys 0.33 (2584903a060)**, Python 3.1
 | Baseline-to-v4 RTL equivalence | PASS using Yosys equivalence passes |
 | Optimized generic netlist ALU simulation | PASS: same 6,801 result checks |
 | Yosys structural checks / latch checks | PASS |
-| GitHub-hosted Actions run | Pending repository publication |
+| GitHub-hosted Actions run | [View hosted validation](https://github.com/shivanshiiii/rv32i-single-cycle/actions) |
 | Physical timing / power / FPGA deployment | Not performed |
 
 Evidence is under `reports/2026-10-23/`. Equivalence proves preservation of the baseline under the documented reset/use model; it does not prove full RISC-V ISA conformance or fix baseline limitations.
@@ -74,7 +74,7 @@ Windows: run `run_windows.bat` for RTL checks, or `run_synthesis_windows.bat` fo
 | `synth/equivalence.ys` | RTL equivalence script |
 | `reports/2026-10-23/` | Recorded logs, cell statistics, source hashes |
 | `docs/` | Architecture, testing, Windows steps, roadmap and resume evidence |
-| `.github/workflows/rtl-tests.yml` | CI definition; not yet run on GitHub |
+| `.github/workflows/rtl-tests.yml` | Hosted RTL, synthesis and equivalence validation |
 | `build/` | Regenerated logs, waveforms and netlists; ignored by Git |
 
 ## Instruction subset

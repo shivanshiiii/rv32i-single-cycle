@@ -2,7 +2,7 @@
 
 Suggested repository name: `rv32i-single-cycle`. Suggested description: `29-instruction RV32I subset in Verilog with self-checking tests, Yosys synthesis and RTL equivalence checks.`
 
-The saved v3 source was recovered; no existing matching GitHub repository was found. This release is prepared for publication, not already pushed. Remote Actions execution remains pending.
+Published on 24 October 2026: https://github.com/shivanshiiii/rv32i-single-cycle . Hosted validation: https://github.com/shivanshiiii/rv32i-single-cycle/actions .
 
 ## Contents to commit
 
